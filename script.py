@@ -1,6 +1,6 @@
 from time import sleep
 
-import keyboard, pygetwindow, webbrowser, yaml
+import keyboard, webbrowser, yaml
 
 def sell():
     keyboard.press_and_release("shift+3")
@@ -50,14 +50,9 @@ def farm(x, y):
 if __name__ == '__main__':
     config = yaml.safe_load(open('./config.yml', 'r'))
 
-    print(pygetwindow.getAllTitles())
-
     if config.get("new_window"):
         webbrowser.open("https://magiccircle.gg/", 1)
         input("Manage login, press Enter to continue...")
-
-    window = pygetwindow.getWindowsWithTitle("Magic Circle")[0]
-    window.activate()
 
     while True:
         reset(0, 5)
