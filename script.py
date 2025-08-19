@@ -54,6 +54,11 @@ if __name__ == '__main__':
         webbrowser.open("https://magiccircle.gg/", 1)
         input("Manage login, press Enter to continue...")
 
+    print("waiting for " + str(config.get("timeout")) + " seconds")
+    print("Press 'q' to exit at any time.")
+    sleep(config.get("timeout"))
+    print("starting farming...")
+
     while True:
         reset(0, 5)
         farm(21, 5)
