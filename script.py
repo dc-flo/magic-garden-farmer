@@ -60,6 +60,6 @@ if __name__ == '__main__':
     print("starting farming...")
 
     while True:
-        reset(0, 5)
-        farm(21, 5)
+        reset(0, 3)
+        farm(21, 7)
         sell()
