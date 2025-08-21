@@ -58,6 +58,7 @@ public class Farmer {
                 if(!clearField()) {
                     sell();
                     goTo(x + i, y + j);
+                    clearField();
                 }
                 Selenide.sleep(100);
                 if (i != width - 1) {
